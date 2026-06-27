@@ -1,4 +1,4 @@
-# Project 01 — Library Management System
+# 📚 Project 01 — Library Management System
 
 > **Project 01 — Beginner Level**
 
