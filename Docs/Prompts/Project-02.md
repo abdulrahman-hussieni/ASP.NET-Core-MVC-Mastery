@@ -1,4 +1,4 @@
-# ☕ Project 02 — Cafe Menu Management System
+# ☕ Cafe Menu Management System
 
 > **Project 02 — Intermediate Level**
 
