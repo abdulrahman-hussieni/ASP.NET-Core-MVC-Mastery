@@ -1,127 +1,262 @@
-# Project 01 — Library Management System
+# 📚 Library Management System
 
-> Beginner Project
+> **Project 01 — Beginner Level**
 
 ---
 
 # 🎯 Goal
 
-Build a simple Library Management System to learn the fundamentals of ASP.NET Core MVC.
+Build a simple Library Management System to master the fundamentals of **ASP.NET Core MVC**.
 
-The focus of this project is learning the framework, not building a complex business application.
+This project intentionally keeps the business logic simple so the focus remains on understanding how ASP.NET Core MVC works internally and how to build clean, maintainable applications.
 
 ---
 
-# 📚 Learning Objectives
+# 📚 What Will I Learn
 
-By the end of this project I should understand:
+During this project I will learn:
 
-* MVC Architecture
-* Request Lifecycle
-* Project Structure
-* Routing
-* Controllers
-* Actions
-* Views
-* Razor Syntax
-* Models
-* ViewModels
+* MVC Fundamentals
+* ASP.NET Core Project Structure
 * Entity Framework Core
-* DbContext
-* Migrations
 * CRUD Operations
-* LINQ
-* Relationships
-* Validation
+* Data Validation
+* Data Access Layer
 * Dependency Injection
-* Repository Pattern (Basic)
-* Search
-* Sorting
-* Pagination
-* Image Upload
+* Data Presentation
+* File Management
 * Error Handling
 * Logging
 
 ---
 
-# 🗄 Database
+# 🧠 Key Concepts
 
-The database is intentionally simple.
+## MVC Fundamentals
 
-Only three tables.
-
-* Authors
-* Categories
-* Books
-
-Relationships:
-
-* One Author → Many Books
-* One Category → Many Books
-
-The goal is to understand relationships without unnecessary complexity.
+* MVC Architecture
+* Request Lifecycle
+* Routing
+* Controllers
+* Actions
+* Views
+* Razor Syntax
+* Layouts
+* Partial Views
+* View Components
+* Models
+* ViewModels
+* ViewData
+* ViewBag
+* TempData
 
 ---
 
-# 📖 Learning Strategy
+## Entity Framework Core
 
-This project is built step by step.
+* DbContext
+* SQL Server Connection
+* Migrations
+* LINQ
+* Relationships
+* CRUD Operations
 
-For every lesson:
+---
 
-1. Learn the concept.
-2. Understand why it exists.
-3. Design before coding.
-4. Implement the feature.
-5. Review the code.
-6. Refactor if needed.
-7. Answer interview questions.
-8. Complete a small challenge.
+## Data Validation
+
+* Data Annotations
+* Model Validation
+* Custom Validation (Introduction)
+
+---
+
+## Data Access Layer
+
+* Repository Pattern (Basic)
+
+---
+
+## Dependency Injection
+
+* Built-in Dependency Injection
+* Service Registration
+
+---
+
+## Data Presentation
+
+* Search
+* Sorting
+* Filtering
+* Pagination
+
+---
+
+## File Management
+
+* Image Upload
+* Static Files
+
+---
+
+## Error Handling
+
+* Exception Handling
+* Custom Error Pages
+
+---
+
+## Logging
+
+* Built-in Logging
+
+---
+
+# 🗄 Database Overview
+
+The database is intentionally small.
+
+It contains only three tables.
+
+### Authors
+
+Stores book authors.
+
+---
+
+### Categories
+
+Stores book categories.
+
+---
+
+### Books
+
+Stores book information.
+
+Each book belongs to:
+
+* One Author
+* One Category
+
+Relationship:
+
+```
+Author (1) ------ (*) Books (*) ------ (1) Category
+```
+
+---
+
+# 📋 Features
+
+* Manage Authors
+* Manage Categories
+* Manage Books
+* Upload Book Images
+* Search Books
+* Sort Books
+* Filter Books
+* Pagination
+* Input Validation
+* Responsive UI
+
+---
+
+# 📈 Progress
+
+## Sprint 0
+
+* [ ] Understanding MVC
+* [ ] Understanding Project Architecture
+* [ ] Database Design
+
+---
+
+## Sprint 1
+
+* [ ] Create Project
+* [ ] Configure SQL Server
+* [ ] Configure Entity Framework Core
+
+---
+
+## Sprint 2
+
+* [ ] Create Models
+* [ ] Configure Relationships
+* [ ] Create Migrations
+
+---
+
+## Sprint 3
+
+* [ ] Authors CRUD
+
+---
+
+## Sprint 4
+
+* [ ] Categories CRUD
+
+---
+
+## Sprint 5
+
+* [ ] Books CRUD
+
+---
+
+## Sprint 6
+
+* [ ] Validation
+
+---
+
+## Sprint 7
+
+* [ ] Search & Filtering
+
+---
+
+## Sprint 8
+
+* [ ] Pagination & Sorting
+
+---
+
+## Sprint 9
+
+* [ ] Image Upload
+
+---
+
+## Sprint 10
+
+* [ ] Refactoring
+* [ ] Final Review
 
 ---
 
 # 🤖 AI Prompt
 
-You are a Senior ASP.NET Core MVC Instructor with more than 15 years of experience.
+This project is taught by following one simple principle:
 
-Your role is not to build the project for me.
+> **Understand First. Code Second.**
 
-Your role is to teach me exactly as a senior mentor would teach a junior backend developer.
+The AI acts as a senior ASP.NET Core mentor.
 
 Rules:
 
-* Never generate the whole project at once.
-* Teach one concept at a time.
-* Explain why every concept exists.
-* Explain how ASP.NET Core MVC works internally.
-* Explain best practices.
-* Explain common mistakes.
-* Give practical examples.
-* Build only the current feature.
-* Wait for my confirmation before continuing.
+* Explain every concept before implementation.
+* Explain why each concept exists.
+* Build one feature at a time.
+* Never generate the whole project.
+* Review the code after every Sprint.
+* Ask interview questions.
+* Give small practical challenges.
+* Suggest better approaches when appropriate.
 
-Every lesson must include:
+The goal is not to finish quickly.
 
-* Theory
-* Internal mechanism
-* Implementation
-* Code Review
-* Interview Questions
-* Small Challenge
-
-Never skip the explanation.
-
-The objective is deep understanding, not finishing the project quickly.
-
----
-
-# 🚀 Project Status
-
-* [ ] Planning
-* [ ] Architecture
-* [ ] Database Design
-* [ ] Project Setup
-* [ ] Development
-* [ ] Code Review
-* [ ] Refactoring
-* [ ] Completed
+The goal is to deeply understand ASP.NET Core MVC and build a strong foundation for the next projects.
