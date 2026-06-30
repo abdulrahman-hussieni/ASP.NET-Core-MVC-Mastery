@@ -9,6 +9,38 @@
 Understand what happens immediately after pressing **Enter** in the browser.
 
 The objective of this Sprint is to understand how communication starts between the browser and the server before ASP.NET Core MVC becomes involved.
+---
+
+# 📚 Concepts Covered
+
+* Browser
+* URL
+* HTTP
+* HTTP Request
+* HTTP Response
+* Request Lifecycle (Introduction)
+
+---
+
+# ❓ The Problem
+
+When a user types:
+
+```text
+https://localhost:5001/books
+```
+
+and presses **Enter**...
+
+What actually happens?
+
+Does the request go directly to the Controller?
+
+The answer is **No**.
+
+Before reaching MVC, the request must travel through several stages.
+
+Understanding this journey is one of the most important foundations of ASP.NET Core.
 
 ---
 
@@ -19,7 +51,6 @@ The following diagram represents the complete lifecycle of an HTTP Request insid
 This is the roadmap for the entire first project.
 
 > **Note**
->
 > At this stage, I am **not expected to understand every step**.
 > This diagram is only a roadmap.
 >
@@ -60,9 +91,6 @@ HTTP Response
     ↓
 Browser
 ```
-
----
-
 ## 📍 Current Position
 
 ```text
@@ -86,39 +114,6 @@ Each Sprint will explain:
 * Practical examples.
 
 By the end of Project 01, every step in this diagram will be completely understood.
-
----
-
-# 📚 Concepts Covered
-
-* Browser
-* URL
-* HTTP
-* HTTP Request
-* HTTP Response
-* Request Lifecycle (Introduction)
-
----
-
-# ❓ The Problem
-
-When a user types:
-
-```text
-https://localhost:5001/books
-```
-
-and presses **Enter**...
-
-What actually happens?
-
-Does the request go directly to the Controller?
-
-The answer is **No**.
-
-Before reaching MVC, the request must travel through several stages.
-
-Understanding this journey is one of the most important foundations of ASP.NET Core.
 
 ---
 
