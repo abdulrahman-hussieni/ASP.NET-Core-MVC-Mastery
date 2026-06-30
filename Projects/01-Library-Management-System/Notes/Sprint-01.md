@@ -6,9 +6,10 @@
 
 # 🎯 Sprint Goal
 
-Understand what happens immediately after pressing **Enter** in the browser.
+- Understand what happens immediately after pressing **Enter** in the browser.
+  
+- The objective of this Sprint is to understand how communication starts between the browser and the server before ASP.NET Core MVC becomes involved
 
-The objective of this Sprint is to understand how communication starts between the browser and the server before ASP.NET Core MVC becomes involved.
 ---
 
 # 📚 Concepts Covered
