@@ -3,7 +3,6 @@
 > **Project 01 — Library Management System**
 
 ---
-
 # 🎯 Sprint Goal
 
 - Understand what happens immediately after pressing **Enter** in the browser.
@@ -11,7 +10,6 @@
 - The objective of this Sprint is to understand how communication starts between the browser and the server before ASP.NET Core MVC becomes involved
 
 ---
-
 # 📚 Concepts Covered
 
 * Browser
@@ -22,7 +20,6 @@
 * Request Lifecycle (Introduction)
 
 ---
-
 # ❓ The Problem
 
 When a user types:
@@ -42,7 +39,6 @@ The answer is **No**.
 Before reaching MVC, the request must travel through several stages.
 
 ---
-
 # 🗺 Request Journey Overview
 
 
@@ -97,7 +93,6 @@ Browser
 Everything below **HTTP Request** will be explored in detail throughout the upcoming Sprints.
 
 ---
-
 # 💡 Key Idea
 
 The browser does not communicate directly with MVC.
@@ -110,15 +105,11 @@ Instead, it sends an **HTTP Request**.
 Without a common protocol, communication between different browsers and different servers would not be possible.
 
 ---
-
 # 🧠 Important Notes
 
-* HTTP is a communication protocol.
-* A protocol defines communication rules.
+* HTTP is a communication protocol => defines communication rules.
 * HTTP itself is **not responsible for security**.
 * HTTPS is HTTP protected by TLS encryption.
-* MVC does not receive the request first.
-* ASP.NET Core does not necessarily execute MVC for every request.
 * Every HTTP Request follows a journey before reaching its final destination.
 
 ---
@@ -138,12 +129,6 @@ MVC is only one part of ASP.NET Core.
 The request must first enter ASP.NET Core so it can be directed to the correct destination instead of randomly reaching a Controller.
 
 This organization makes the application more efficient and scalable.
-
-### Mentor Feedback
-
-Excellent reasoning.
-
-One important addition:
 
 Not every request should go to MVC.
 
@@ -170,110 +155,32 @@ HTTP defines the communication rules between the browser and the server.
 
 Without these rules, every browser and every server would communicate differently, making communication unreliable.
 
-### Mentor Feedback
-
-Excellent answer.
-
-Important correction:
-
 HTTP is responsible for communication.
 
 HTTPS is responsible for secure communication.
 
 Always distinguish between communication and security.
 
----
-
-## Question 3
-
-### Which parts are still unclear?
-
-### My Answer
-
-* Middleware
-* Routing
-
-I intentionally want to learn them at the correct time.
-
-I also want to deeply understand the complete Request Lifecycle.
-
-### Mentor Feedback
-
-Excellent.
-
-This is exactly the mindset we want.
-
-Do not memorize concepts before understanding where they fit in the request journey.
 
 ---
 
-# ⭐ Golden Sentences
-
-> Software Engineering is not about writing code. It is about managing complexity.
-
----
-
-> MVC is not the first component that receives a request.
-
----
-
-> HTTP defines communication rules, not security.
-
----
-
-> Every request follows a journey before reaching your Controller.
-
----
-
-> Understand the journey before learning the components.
-
----
 
 # 🎤 Interview Questions
 
 ### Why doesn't every HTTP Request go directly to a Controller?
 
----
-
 ### What is HTTP?
-
----
 
 ### What is the difference between HTTP and HTTPS?
 
----
-
 ### Is MVC responsible for receiving the request?
-
----
 
 ### Why is MVC only one part of ASP.NET Core?
 
 ---
-
-# 📌 Summary
-
-Today I learned that pressing **Enter** in the browser starts a communication process rather than executing MVC directly.
-
-The browser creates an HTTP Request and sends it to the server.
-
-ASP.NET Core is responsible for handling that request before it reaches MVC.
-
-I also learned that HTTP defines communication rules, while HTTPS adds security using TLS.
-
-This Sprint introduced the Request Lifecycle, which will become the main learning path for the entire first project.
-
----
-
-# 🚀 Next Sprint
-
-## Request Journey — Chapter 2
-
-### Kestrel Web Server
-
 **Question:**
 
-> Who actually receives the HTTP Request first?
+> Who actually receives the HTTP Request first?????????? next sprint 
 
 ---
 
