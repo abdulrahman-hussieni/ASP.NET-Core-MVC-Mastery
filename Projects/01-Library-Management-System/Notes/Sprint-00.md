@@ -94,7 +94,7 @@ Responsible for:
 
 ### ASP.NET Framework
 
-                                          ```text
+```text
                                           Browser
                                               │
                                           HTTP Request
@@ -108,13 +108,12 @@ Responsible for:
                                           View
                                               │
                                           Browser
-                                          ```
-                                          
-                                          ---
+```
+---
 
 ### ASP.NET Core (Development)
 
-                                          ```text
+  ```text
                                           Browser
                                               │
                                           HTTP Request
@@ -124,13 +123,12 @@ Responsible for:
                                           ASP.NET Core
                                               │
                                           Browser
-                                          ```
-                                          
-                                          ---
+  ```                                    
+---
 
 ### ASP.NET Core (Production)
 
-                                          ```text
+ ```text
                                           Browser
                                               │
                                           HTTP Request
@@ -144,15 +142,15 @@ Responsible for:
                                           ASP.NET Core
                                               │
                                           Browser
-                                          ```
+ ```
                                           
-                                          ---
+---
 
 # 4️⃣ The Complete Request Lifecycle
 
 Throughout this Bootcamp, we will follow the Request step by step.
 
-                                        ```text
+ ```text
                                         Browser
                                             │
                                         HTTP Request
@@ -184,7 +182,7 @@ Throughout this Bootcamp, we will follow the Request step by step.
                                         HTTP Response
                                             │
                                         Browser
-                                        ```
+```
 
 ---
 
