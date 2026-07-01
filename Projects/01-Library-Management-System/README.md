@@ -26,7 +26,7 @@ By the end of this project, I should be able to explain every step of the Reques
 > The following roadmap represents the complete learning journey of Project 01.
 
 <p align="center">
-  <img src="./Notes/Project 01 Roadmap.png" width="100%">
+  <img src="./Notes/Project%2001%20Roadmap.png" width="100%">
 </p>
 
 ---
