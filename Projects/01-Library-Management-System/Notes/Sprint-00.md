@@ -17,7 +17,7 @@
 * Why MVC Exists
 * Tight Coupling
 * Separation of Concerns (SoC)
-* Thinking Like a Software Engineer
+* Software Engineer Thinking
 
 ---
 
