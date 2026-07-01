@@ -26,7 +26,7 @@ By the end of this project, I should be able to explain every step of the Reques
 > The following roadmap represents the complete learning journey of Project 01.
 
 <p align="center">
-  <img width="1536" height="1024" alt="ChatGPT Image Jul 1, 2026, 10_28_46 PM" src="https://github.com/user-attachments/assets/2470d79a-f640-4a02-9c61-7c58e9a61e29" />
+  <img src="./Notes/Roadmap.png" width="100%">
 </p>
 
 ---
