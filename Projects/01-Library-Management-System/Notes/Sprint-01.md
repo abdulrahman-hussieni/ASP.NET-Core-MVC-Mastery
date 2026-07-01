@@ -41,20 +41,14 @@ The answer is **No**.
 
 Before reaching MVC, the request must travel through several stages.
 
-Understanding this journey is one of the most important foundations of ASP.NET Core.
-
 ---
 
 # 🗺 Request Journey Overview
 
-The following diagram represents the complete lifecycle of an HTTP Request inside an ASP.NET Core MVC application.
-
-This is the roadmap for the entire first project.
 
 > **Note**
 > At this stage, I am **not expected to understand every step**.
 > This diagram is only a roadmap.
->
 > During the upcoming Sprints, every single box below will become a complete lesson until I fully understand the entire Request Lifecycle.
 
 ```text
