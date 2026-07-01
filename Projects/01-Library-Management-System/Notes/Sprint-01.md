@@ -96,20 +96,6 @@ Browser
 
 Everything below **HTTP Request** will be explored in detail throughout the upcoming Sprints.
 
-Each Sprint will explain:
-
-* Why this stage exists.
-* What problem it solves.
-* What happens internally.
-* What ASP.NET Core is doing behind the scenes.
-* How this stage communicates with the next one.
-* Common mistakes.
-* Best practices.
-* Interview questions.
-* Practical examples.
-
-By the end of Project 01, every step in this diagram will be completely understood.
-
 ---
 
 # 💡 Key Idea
@@ -118,7 +104,8 @@ The browser does not communicate directly with MVC.
 
 Instead, it sends an **HTTP Request**.
 
-HTTP is a communication protocol that defines the rules both the browser and the server must follow.
+### HTTP:
+    is a communication protocol that defines the rules both the browser and the server must follow.
 
 Without a common protocol, communication between different browsers and different servers would not be possible.
 
