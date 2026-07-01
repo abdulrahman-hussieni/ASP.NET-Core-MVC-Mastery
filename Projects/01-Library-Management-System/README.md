@@ -47,7 +47,7 @@ The goal is to understand **why every line of code exists** before writing it.
 
 # 📚 Learning Phases
 
-## ✅ Phase 0 — The Complete Request Lifecycle
+## 🚧 Phase 0 — The Complete Request Lifecycle
 
 Learn how an HTTP Request travels inside ASP.NET Core from the Browser until the HTML Response returns.
 
@@ -78,15 +78,13 @@ Prepare the application for production deployment using IIS, Linux and Docker.
 ---
 
 # 🎯 Final Goal
-
-After completing this project, I should be able to:
-
-- ✅ Explain the complete ASP.NET Core Request Lifecycle.
-- ✅ Build MVC applications without relying on templates.
-- ✅ Design clean and maintainable architectures.
-- ✅ Debug ASP.NET Core applications confidently.
-- ✅ Build production-ready MVC applications.
-- ✅ Pass ASP.NET Core MVC technical interviews.
+    After completing this project, I should be able to:
+- 🚧 Explain the complete ASP.NET Core Request Lifecycle.
+- 🚧 Build MVC applications without relying on templates.
+- 🚧 Design clean and maintainable architectures.
+- 🚧 Debug ASP.NET Core applications confidently.
+- 🚧 Build production-ready MVC applications.
+- 🚧 Pass ASP.NET Core MVC technical interviews.
 
 ---
 
