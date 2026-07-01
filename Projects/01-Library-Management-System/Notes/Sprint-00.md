@@ -1,164 +1,198 @@
-# Sprint 00 — Before Writing Any Code
+# Sprint 00 — Why ASP.NET Core MVC?
 
-> Project 01 — Library Management System
+> Phase 0 — The Complete Request Lifecycle
 
 ---
 
 # 🎯 Sprint Goal
-
-- Understand why ASP.NET Core MVC exists before writing any code.
--  The objective of this Sprint is to understand the problem that MVC was designed to solve.
-> No coding -- No Visual Studio -- Only understanding.
-
----
-
-# 📚 Concepts Covered
-
-* Why MVC Exists
-* Tight Coupling
-* Separation of Concerns (SoC)
-* Software Engineer Thinking
+ We will learn:
+    - Why MVC exists.
+    - Why ASP.NET Core was introduced.
+    - The difference between Development and Production hosting.
+    - The complete ASP.NET Core Request Lifecycle.
 
 ---
 
-# ❓ The Problem
+# 🖼 Request Lifecycle Overview
 
-Imagine building a website where everything exists inside one file:
-
-* HTML
-* CSS
-* JavaScript
-* C#
-* SQL Queries
-* Validation
-* Business Logic
-
-As the project grows, the file becomes extremely difficult to understand, modify, test, and maintain.
-
-This was one of the biggest problems in early web development.
+<p align="center">
+    <img src="../imags/Sprint-00.png" width="100%">
+</p>
 
 ---
 
-# 💡 Key Idea
+# 📚 Topics
+    - Separation of Concerns
+    - ASP.NET Framework vs ASP.NET Core
+    - Development vs Production
+    - IIS
+    - Kestrel
+    - Reverse Proxy
+    - Request Lifecycle Overview
+---
 
-The problem was **not** that developers couldn't write code.
+# 1️⃣ Why MVC?
 
-The problem was that everything depended on everything else.
+    # ❓ The Problem
+        Imagine building a website where everything exists inside one file:
+          * HTML
+          * CSS
+          * JavaScript
+          * C#
+          * SQL Queries
+          * Validation
+          * Business Logic
+Without MVC, everything would be placed in one location:
 
-This is called:
+- UI
+- Business Logic
+- Database
+- Validation
+- Authentication
 
-> **Tight Coupling**
+As the application grows, maintaining it becomes difficult.
 
-A small modification in one place could unexpectedly break another part of the application.
+MVC solves this by separating responsibilities.
 
 ---
 
-# ✅ Solution
+# 2️⃣ Separation of Concerns
 
-Software engineers introduced a design principle called:
+MVC divides the application into three parts.
 
-## Separation of Concerns (SoC)
+### Model
 
-Instead of placing everything in one place,
+Responsible for:
 
-each part of the application should have a single responsibility.
-
-Examples:
-
-* UI
-* Business Logic
-* Data Access
-* Validation
-* Authentication
-
-Each one belongs in its own place.
-
-MVC is one way of applying this principle.
+- Data
+- Business Rules
+- Database
 
 ---
 
-# 🧠 Important Note
+### View
 
-MVC is **not the goal**.
+Responsible for:
 
-MVC is simply a design pattern that helps organize an application by separating responsibilities.
-
-The real goal is writing software that is:
-
-* Easier to maintain
-* Easier to extend
-* Easier to understand
-* Easier to test
+- User Interface
+- HTML
+- Display
 
 ---
 
-# 💬 My Answers
+### Controller
 
-## Question 1
+Responsible for:
 
-### What problems happen if everything is placed in one file?
-
-My answer:
-
-* Everything becomes dependent on everything else.
-* Changing one part may unexpectedly break another.
-* Finding where to modify code becomes difficult.
-* Adding new features becomes harder as the project grows.
+- Receiving Requests
+- Calling Business Logic
+- Returning Responses
 
 ---
 
-## Question 2
+# 3️⃣ ASP.NET Framework vs ASP.NET Core
 
-### Why do companies separate responsibilities?
+### ASP.NET Framework
 
-My answer:
+                                          ```text
+                                          Browser
+                                              │
+                                          HTTP Request
+                                              │
+                                          IIS
+                                              │
+                                          ASP.NET MVC
+                                              │
+                                          Controller
+                                              │
+                                          View
+                                              │
+                                          Browser
+                                          ```
+                                          
+                                          ---
 
-Separating responsibilities makes every part of the application easier to locate, understand, modify, and extend without affecting unrelated parts of the system.
+### ASP.NET Core (Development)
+
+                                          ```text
+                                          Browser
+                                              │
+                                          HTTP Request
+                                              │
+                                          Kestrel
+                                              │
+                                          ASP.NET Core
+                                              │
+                                          Browser
+                                          ```
+                                          
+                                          ---
+
+### ASP.NET Core (Production)
+
+                                          ```text
+                                          Browser
+                                              │
+                                          HTTP Request
+                                              │
+                                          IIS / Nginx
+                                              │
+                                          Reverse Proxy
+                                              │
+                                          Kestrel
+                                              │
+                                          ASP.NET Core
+                                              │
+                                          Browser
+                                          ```
+                                          
+                                          ---
+
+# 4️⃣ The Complete Request Lifecycle
+
+Throughout this Bootcamp, we will follow the Request step by step.
+
+                                        ```text
+                                        Browser
+                                            │
+                                        HTTP Request
+                                            │
+                                        Kestrel
+                                            │
+                                        HttpContext
+                                            │
+                                        Middleware Pipeline
+                                            │
+                                        Endpoint Routing
+                                            │
+                                        Controller Activation
+                                            │
+                                        Action Execution
+                                            │
+                                        Model Binding
+                                            │
+                                        Model Validation
+                                            │
+                                        Business Logic
+                                            │
+                                        Action Result
+                                            │
+                                        Razor View Engine
+                                            │
+                                        HTML Response
+                                            │
+                                        HTTP Response
+                                            │
+                                        Browser
+                                        ```
 
 ---
 
-## Question 3
+# ⭐ Key Takeaways
 
-### If I were designing a framework, what would I improve?
-
-My answer:
-
-MVC is excellent for learning and for many real-world applications.
-
-However, as applications become larger, responsibilities need to be separated even further.
-
-Examples:
-
-* Services
-* Repositories
-* DTOs
-* Components
-* Additional layers
-
-The larger the project becomes, the more separation is needed.
+- MVC separates responsibilities.
+- ASP.NET Core uses Kestrel as its web server.
+- In production, IIS or Nginx usually works as a Reverse Proxy.
+- Every Request follows the same lifecycle.
 
 ---
-
-# 🎤 Interview Question
-
-**Why do we use MVC?**
-
-Current understanding:
-
-MVC is not used simply to separate files.
-
-It is used to help organize responsibilities, reduce coupling, improve maintainability, and make software easier to extend as it grows.
-
----
-
-# 🚀 Sprint Result
-
-* [x] Understand the problem.
-* [x] Understand Tight Coupling.
-* [x] Understand Separation of Concerns.
-* [x] Complete first discussion.
-* [x] Pass first review.
-
-Sprint Status:
-
-**Completed ✅**
