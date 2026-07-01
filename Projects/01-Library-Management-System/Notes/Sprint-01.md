@@ -1,197 +1,330 @@
-# Sprint 01 — HTTP Request
+# Sprint 01 — HTTP & Web Fundamentals
 
-> **Project 01 — Library Management System**
-
----
-# 🎯 Sprint Goal
-
-- Understand what happens immediately after pressing **Enter** in the browser.
-  
-- The objective of this Sprint is to understand how communication starts between the browser and the server before ASP.NET Core MVC becomes involved
+> **Project:** Library Management System  
+> **Phase:** Request Lifecycle Foundations  
+> **Sprint Goal:** Understand everything that happens from the moment a user presses **Enter** in the browser until the HTTP Request leaves the client and starts its journey toward ASP.NET Core.
 
 ---
-# 📚 Concepts Covered
-
-* Browser
-* URL
-* HTTP
-* HTTP Request
-* HTTP Response
-* Request Lifecycle (Introduction)
+# 🎯 Sprint Objectives
+    - Explain how communication starts between a Browser and a Web Server.
+    - Understand the structure of a URL.
+    - Understand how the Browser prepares an HTTP Request.
+    - Read and analyze any HTTP Request.
+    - Read and analyze any HTTP Response.
+    - Understand HTTP Methods.
+    - Understand HTTP Headers.
+    - Understand HTTP Body.
+    - Understand HTTP Status Codes.
+    - Inspect HTTP traffic using Chrome DevTools.
+    - Prepare for entering the ASP.NET Core Request Pipeline.
 
 ---
-# ❓ The Problem
-
-When a user types:
+# 🗺 Request Journey
 
 ```text
-https://localhost:5001/books
+                                                        User
+                                                            │
+                                                            ▼
+                                                        Browser
+                                                            │
+                                                            ▼
+                                                        URL
+                                                            │
+                                                            ▼
+                                                        Browser Internal Work
+                                                            │
+                                                            ▼
+                                                        HTTP Request
+                                                            │
+                                                            ▼
+                                                        Internet
+                                                            │
+                                                            ▼
+                                                        Kestrel
+                                                            │
+                                                            ▼
+                                                        ASP.NET Core
 ```
 
-and presses **Enter**...
-
-What actually happens?
-
-Does the request go directly to the Controller?
-
-The answer is **No**.
-
-Before reaching MVC, the request must travel through several stages.
+> This Sprint covers everything from **User** until the request reaches **Kestrel**.
 
 ---
-# 🗺 Request Journey Overview
+# Lesson 01 — What Happens When I Press Enter?
+---
 
+## 🎯 Goal
+    Understand the complete journey that starts after pressing **Enter** inside the Browser.
 
-> **Note**
-> At this stage, I am **not expected to understand every step**.
-> This diagram is only a roadmap.
-> During the upcoming Sprints, every single box below will become a complete lesson until I fully understand the entire Request Lifecycle.
+---
+
+## 💡 Concepts
+
+    Typing a URL inside the Browser does **not** send the request directly to ASP.NET Core.
+    
+    Instead, the Browser starts preparing an HTTP Request.
+    
+    The Request must travel through several stages before reaching our application.
+
+---
+
+    ## 🌍 Beyond ASP.NET Core
+      Before reaching ASP.NET Core, every Request passes through technologies like:
+          - DNS
+          - TCP
+          - TLS
+      These belong to Networking rather than ASP.NET Core.
+
+---
+
+## 🧠 Think Like an Engineer
+
+When you press **Enter**, does the Browser immediately contact ASP.NET Core?  No.
+
+Many operations happen before any communication with the server begins.
+
+---
+# Lesson 02 — URL Fundamentals
+---
+
+## 🎯 Goal
+    Understand every component inside a URL and why each part exists.
+---
+Example:
 
 ```text
-Browser
-    ↓
-HTTP Request
-    ↓
-Kestrel Web Server
-    ↓
-ASP.NET Core Host
-    ↓
-Middleware Pipeline
-    ↓
-Endpoint Routing
-    ↓
-MVC
-    ↓
-Controller Activation
-    ↓
-Action Execution
-    ↓
-Model Binding
-    ↓
-Validation
-    ↓
-Business Logic
-    ↓
-Action Result
-    ↓
-Razor View Engine
-    ↓
-HTML Response
-    ↓
-HTTP Response
-    ↓
-Browser
+    https://localhost:5001/books/15?page=2&sort=name
 ```
-## 📍 Current Position
+
+A URL is composed of multiple parts.
+
+| Part | Example |
+|------|----------|
+| Protocol | https |
+| Host | localhost |
+| Port | 5001 |
+| Path | /books/15 |
+| Query String | ?page=2&sort=name |
+
+---
+
+### Protocol
+    Defines the communication rules between the Client and the Server.
+    Examples:
+    
+    - HTTP
+    - HTTPS
+    
+    HTTPS = HTTP + TLS Encryption.
+
+---
+
+### Why do we need a Protocol?
+    Without common communication rules:
+    
+    - Browsers couldn't communicate with Servers.
+    - Every company would invent its own communication format.
+    - The Web would not be standardized.
+---
+
+### Host
+    Specifies which Server should receive the Request.
+
+Examples:
+```text
+    google.com
+    
+    github.com
+    
+    localhost
+```
+
+---
+
+## Domain vs Host
+
+    - Domain is the registered website name.
+    
+    - Host identifies the destination machine.
+
+In many URLs they appear identical, but they are not conceptually the same.
+
+---
+
+### FQDN (Fully Qualified Domain Name)
+
+Example:
+
+    www.google.com
+    
+    It represents the complete domain hierarchy.
+--
+
+### localhost
+
+    `localhost` always refers to your own computer.
+
+Equivalent IP Address:
 
 ```text
-Browser
-    ↓
-✅ HTTP Request
+127.0.0.1
+```
+---
+
+### IP Address
+
+    Every device connected to a network has an address.
+
+Example:
+
+```text
+192.168.1.10
 ```
 
-Everything below **HTTP Request** will be explored in detail throughout the upcoming Sprints.
-
----
-# 💡 Key Idea
-
-The browser does not communicate directly with MVC.
-
-Instead, it sends an **HTTP Request**.
-
-### HTTP:
-    is a communication protocol that defines the rules both the browser and the server must follow.
-
-Without a common protocol, communication between different browsers and different servers would not be possible.
-
----
-# 🧠 Important Notes
-
-* HTTP is a communication protocol => defines communication rules.
-* HTTP itself is **not responsible for security**.
-* HTTPS is HTTP protected by TLS encryption.
-* Every HTTP Request follows a journey before reaching its final destination.
+Domain names exist because remembering IP addresses is difficult.
 
 ---
 
-# 💬 My Answers
+### Port
 
-## Question 1
+    The Port identifies which application should receive the Request.
 
-### Why doesn't the request go directly to the Controller?
+Example:
 
-### My Answer
+```text
+https://localhost:5001
+```
 
-ASP.NET Core is much larger than MVC.
-
-MVC is only one part of ASP.NET Core.
-
-The request must first enter ASP.NET Core so it can be directed to the correct destination instead of randomly reaching a Controller.
-
-This organization makes the application more efficient and scalable.
-
-Not every request should go to MVC.
-
-Some requests may be for:
-
-* Static Files
-* CSS
-* JavaScript
-* Images
-* APIs
-* SignalR
-
-ASP.NET Core decides where the request should go.
+5001 identifies the ASP.NET Core application listening on that machine.
 
 ---
 
-## Question 2
+### Why is Port needed?
 
-### Why do we need HTTP?
+    One computer may run: All share the same IP Address. Ports distinguish between them.
 
-### My Answer
+---
+### Path
 
-HTTP defines the communication rules between the browser and the server.
+Represents the Resource requested from the Server.
 
-Without these rules, every browser and every server would communicate differently, making communication unreliable.
+Examples:
 
-HTTP is responsible for communication.
-
-HTTPS is responsible for secure communication.
-
-Always distinguish between communication and security.
-
+```text
+    /books
+    
+    /books/15
+    
+    /api/products
+```
 
 ---
 
+### Route vs Path
 
-# 🎤 Interview Questions
-
-### Why doesn't every HTTP Request go directly to a Controller?
-
-### What is HTTP?
-
-### What is the difference between HTTP and HTTPS?
-
-### Is MVC responsible for receiving the request?
-
-### Why is MVC only one part of ASP.NET Core?
-
----
-**Question:**
-
-> Who actually receives the HTTP Request first?????????? next sprint 
+    Path belongs to the URL.
+    
+    Route is how ASP.NET Core matches that Path to an Endpoint.
+    
+    We'll study Routing later.
 
 ---
 
-# ✅ Sprint Result
+### Query String
 
-* [x] Understand HTTP
-* [x] Understand HTTP Request
-* [x] Understand HTTP Response
-* [x] Understand the role of the Browser
-* [x] Begin understanding the Request Lifecycle
-* [x] Complete Assignment
-* [x] Pass Mentor Review
+Extra information sent with the Request.
 
-**Sprint Status:** Completed ✅
+Example:
+
+```text
+?page=2&sort=name
+```
+
+Often used for:
+
+- Filtering
+- Searching
+- Sorting
+- Pagination
+
+---
+
+### URL Encoding
+
+Some characters cannot appear directly inside a URL.
+
+Example:
+
+Space
+
+↓
+
+```text
+%20
+```
+
+Example:
+
+```text
+Clean Code
+```
+
+becomes
+
+```text
+Clean%20Code
+```
+
+---
+
+### Reserved Characters
+
+    Characters like: [ ? & # / ]
+    
+    already have meanings inside URLs.
+    
+    They must be encoded when used as data.
+
+---
+
+### URI vs URL vs URN
+
+    URI : General identifier.
+    
+    ↓
+    
+    URL : Identifier + Location.
+    
+    ↓
+    
+    URN : Identifier without Location.
+
+For Web Development we mainly work with URLs.
+
+---
+
+### Absolute URL : Contains everything.
+
+    https://localhost:5001/books    
+---
+
+### Relative URL : Depends on the current page.
+    
+    /books
+---
+
+### Base URL : The common starting point.
+
+    https://localhost:5001
+
+---
+
+### Virtual Directory (Introduction) : Some Servers host multiple applications under one Domain.
+
+    https://company.com/hr
+We'll revisit this during IIS Deployment.
+
+
+
+Now that the Browser understands the URL...
+
+**What happens inside the Browser before sending the HTTP Request?**
