@@ -86,8 +86,3 @@ Prepare the application for production deployment using IIS, Linux and Docker.
 - 🚧 Build production-ready MVC applications.
 - 🚧 Pass ASP.NET Core MVC technical interviews.
 
----
-
-## 💡 Golden Rule
-
-> **Understand the Request. Understand the Framework. Then Build the Project.**
