@@ -139,36 +139,6 @@ The larger the project becomes, the more separation is needed.
 
 ---
 
-# 📝 Mentor Feedback
-
-### Strengths
-
-* Good logical thinking.
-* Thinking beyond syntax.
-* Started connecting project size with architecture.
-
----
-
-### Things to Improve
-
-Instead of thinking only about organizing files,
-
-always think about solving software complexity.
-
-The objective of architecture is not beautiful folders.
-
-The objective is making software easier to maintain, scale, test, and develop.
-
----
-
-# ⭐ Golden Sentence
-
-> Software Engineering is not about writing code.
-
-> It is about managing complexity.
-
----
-
 # 🎤 Interview Question
 
 **Why do we use MVC?**
