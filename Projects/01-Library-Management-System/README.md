@@ -88,18 +88,6 @@ Prepare the application for production deployment using IIS, Linux and Docker.
 
 ---
 
-# 📈 Progress
-
-| Phase | Status |
-|-------|--------|
-| Phase 0 — Request Lifecycle | ⬜ |
-| Phase 1 — Building the Project | ⬜ |
-| Phase 2 — Security & Identity | ⬜ |
-| Phase 3 — Architecture & Clean Code | ⬜ |
-| Phase 4 — Production & Deployment | ⬜ |
-
----
-
 ## 💡 Golden Rule
 
 > **Understand the Request. Understand the Framework. Then Build the Project.**
