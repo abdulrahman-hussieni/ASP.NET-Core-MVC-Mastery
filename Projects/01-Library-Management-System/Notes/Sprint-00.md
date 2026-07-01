@@ -6,9 +6,9 @@
 
 # 🎯 Sprint Goal
 
--- Understand why ASP.NET Core MVC exists before writing any code.
+- Understand why ASP.NET Core MVC exists before writing any code.
 -  The objective of this Sprint is to understand the problem that MVC was designed to solve.
--- No coding -- No Visual Studio -- Only understanding.
+> No coding -- No Visual Studio -- Only understanding.
 
 ---
 
