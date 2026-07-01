@@ -158,177 +158,103 @@ The goal is to understand **why every line of code exists** before writing it.
     - Naming Conventions
     - Clean Project Organization
 ## Sprint 10 — Domain & Database Design
-
-- Domain Models
-- Relationships
-- Entity Framework Core
-- DbContext
-- Migrations
-
----
-
+    - Domain Models
+    - Relationships
+    - Entity Framework Core
+    - DbContext
+    - Migrations
 ## Sprint 11 — CRUD Operations
-
-- Create
-- Read
-- Update
-- Delete
-- ViewModels
-
----
-
+    - Create
+    - Read
+    - Update
+    - Delete
+    - ViewModels
 ## Sprint 12 — Advanced CRUD Features
-
-- Search
-- Sorting
-- Pagination
-- Filtering
-- File Upload
-
----
-
+    - Search
+    - Sorting
+    - Pagination
+    - Filtering
+    - File Upload
 ## Sprint 13 — Error Handling & User Experience
-
-- Exception Handling
-- Validation Messages
-- Custom Error Pages
-- Logging (Introduction)
-
----
+    - Exception Handling
+    - Validation Messages
+    - Custom Error Pages
+    - Logging (Introduction)
 
 ## 🎯 Phase Result
-
-Build a complete MVC application using best practices.
-
+  ### Build a complete MVC application using best practices.
 ---
 
 # 🚧 Phase 2 — Security & Identity
 
 ## Sprint 14 — Authentication
-
-- Authentication
-- Cookies
-- Login
-- Logout
-
----
-
+    - Authentication
+    - Cookies
+    - Login
+    - Logout
 ## Sprint 15 — Authorization
-
-- Roles
-- Claims
-- Policies
-- Identity
-
----
-
+    - Roles
+    - Claims
+    - Policies
+    - Identity
 ## Sprint 16 — Security Best Practices
-
-- CSRF
-- XSS
-- SQL Injection
-- Password Hashing
-- Secure Configuration
-
----
-
+    - CSRF
+    - XSS
+    - SQL Injection
+    - Password Hashing
+    - Secure Configuration
 ## 🎯 Phase Result
-
-Secure the application for production use.
-
+  ### Secure the application for production use.
 ---
 
 # 🚧 Phase 3 — Architecture & Clean Code
 
 ## Sprint 17 — Dependency Injection Deep Dive
-
-- DI Internals
-- Service Lifetimes
-- Best Practices
-
----
-
+    - DI Internals
+    - Service Lifetimes
+    - Best Practices
 ## Sprint 18 — Design Patterns
-
-- Repository
-- Unit of Work
-- Service Layer
-- Factory (Introduction)
-
----
-
+    - Repository
+    - Unit of Work
+    - Service Layer
+    - Factory (Introduction)
 ## Sprint 19 — Clean Architecture
-
-- Layered Architecture
-- SOLID Principles
-- Clean Code
-- Refactoring
-
----
-
+    - Layered Architecture
+    - SOLID Principles
+    - Clean Code
+    - Refactoring
 ## Sprint 20 — Application Configuration
-
-- appsettings.json
-- Options Pattern
-- Logging
-- Environment Configuration
-
----
-
+    - appsettings.json
+    - Options Pattern
+    - Logging
+    - Environment Configuration
 ## 🎯 Phase Result
-
-Write maintainable and scalable ASP.NET Core applications.
-
+  ### Write maintainable and scalable ASP.NET Core applications.
 ---
 
 # 🚧 Phase 4 — Production & Deployment
 
 ## Sprint 21 — Publishing
-
-- Publish
-- Release Build
-- Self-contained vs Framework-dependent
-
----
-
+    - Publish
+    - Release Build
+    - Self-contained vs Framework-dependent
 ## Sprint 22 — IIS Deployment
-
-- IIS
-- Application Pool
-- Reverse Proxy
-- Hosting Bundle
-
----
-
+    - IIS
+    - Application Pool
+    - Reverse Proxy
+    - Hosting Bundle
 ## Sprint 23 — Linux & Docker
-
-- Linux Hosting
-- Nginx
-- Docker Basics
-
----
-
+    - Linux Hosting
+    - Nginx
+    - Docker Basics
 ## Sprint 24 — Azure & Monitoring
-
-- Azure Deployment
-- Logs
-- Monitoring
-- Production Checklist
-
----
-
+    - Azure Deployment
+    - Logs
+    - Monitoring
+    - Production Checklist
 ## 🎯 Phase Result
-
-Deploy and maintain production-ready ASP.NET Core MVC applications.
-
-
+  ### Deploy and maintain production-ready ASP.NET Core MVC applications.
 ---
----
----
----
----
---
-
 
 # 🎯 Final Goal
     After completing this project, I should be able to:
