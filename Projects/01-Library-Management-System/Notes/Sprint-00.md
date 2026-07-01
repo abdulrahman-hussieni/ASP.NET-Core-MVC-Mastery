@@ -16,7 +16,7 @@
 # 🖼 Request Lifecycle Overview
 
 <p align="center">
-    <img src="../Imags/Sprint-00.png" width="100%">
+    <img src="./Imags/Sprint-00.png" width="100%">
 </p>
 
 ---
