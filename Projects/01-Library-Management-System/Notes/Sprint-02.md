@@ -1,4 +1,4 @@
-# 🚧 Sprint 02 — Kestrel & Web Hosting Fundamentals
+# Sprint 02 — Kestrel & Web Hosting Fundamentals
 
 > **Goal:** Understand how ASP.NET Core applications are hosted and why Kestrel exists.
 
